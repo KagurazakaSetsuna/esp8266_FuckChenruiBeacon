@@ -261,9 +261,11 @@ void setup() {
   Serial.println("Started \\o/");
   Serial.println();
   WiFi.setOutputPower(20.5);
+  pinMode(2, OUTPUT);
 }
 
 void loop() {
+  digitalWrite(2, HIGH);
   currentTime = millis();
 
   // send out SSIDs
@@ -345,4 +347,5 @@ void loop() {
     Serial.println(packetCounter);
     packetCounter = 0;
   }
+  digitalWrite(2, LOW);
 }
