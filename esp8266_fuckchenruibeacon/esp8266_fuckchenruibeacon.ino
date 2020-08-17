@@ -19,7 +19,7 @@ const bool appendSpaces = true; // makes all SSIDs 32 characters long to improve
 const char ssids[] PROGMEM = {
   "Project On Git\n"
   "KagurazakaSetsuna\n"
-  "/esp8266_FuckChenruiBeacon\n"
+  "git esp8266_FuckChenruiBeacon\n"
   "FuckChenRui0\n"
   "FuckChenRui1\n"
   "FuckChenRui2\n"
@@ -260,6 +260,7 @@ void setup() {
   Serial.println();
   Serial.println("Started \\o/");
   Serial.println();
+  WiFi.setOutputPower(20.5);
 }
 
 void loop() {
